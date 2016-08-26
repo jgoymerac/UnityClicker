@@ -16,7 +16,7 @@ public class ItemManager : MonoBehaviour {
     }
 
     void Update() {
-        itemInfo.text = itemName + "\nCost: " + cost + "\nEnergy: " + tickValue + "/s";
+        itemInfo.text = itemName +" ("+count+")"+ "\nCost: " + cost + "\nEnergy: " + tickValue + "/s";
     }
 
     public void PurchasedItem() {
