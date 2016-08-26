@@ -16,8 +16,8 @@ public class EnergyPerSec : MonoBehaviour {
     }
 
 
-    public int GetEnergyPerSec() {
-        int tick = 0;
+    public float GetEnergyPerSec() {
+        float tick = 0;
         foreach(ItemManager item in items){
             tick += item.count * item.tickValue;
         }
@@ -25,13 +25,13 @@ public class EnergyPerSec : MonoBehaviour {
     }
 	
     public void AutoEnergyPerSec() {
-        click.energy += GetEnergyPerSec();
+        click.energy += GetEnergyPerSec()/10;
     }
 
     IEnumerator AutoTick() {
         while (true) {
             AutoEnergyPerSec();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.1f);
         }
     }
 
