@@ -1,3 +1,3 @@
 # UnityClicker
-Simple Clicker game built using Unity and C# test1
+Simple Clicker game built using Unity and C# 
 
