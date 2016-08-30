@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ItemManager : MonoBehaviour {
 
@@ -9,14 +10,26 @@ public class ItemManager : MonoBehaviour {
     public int tickValue;
     public int count;
     public string itemName;
+    public Color standard;
+    public Color affordable;
     private float baseCost;
+    
 
     void Start() {
         baseCost = cost;
+       
+
     }
 
     void Update() {
         itemInfo.text = itemName +" ("+count+")"+ "\nCost: " + cost + "\nEnergy: " + tickValue + "/s";
+        if (click.energy >= cost) {
+            GetComponent<Image>().color = affordable;
+        } else {
+            GetComponent<Image>().color = standard;
+        }
+
+        
     }
 
     public void PurchasedItem() {
