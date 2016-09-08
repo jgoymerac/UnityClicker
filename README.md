@@ -1,10 +1,10 @@
 # UnityClicker
-Simple Clicker game built using Unity and C# 
+Simple Clicker game built using Unity and C-Sharp 
 
-To Do:
-  -make upgradeBonus button only purchaseable once;
-  -add upgradebonus buttons and more to other items
-  -add text on hover for items showing percent of energy/s they produce
-  -much more
+| To Do\n
+| -make upgradeBonus button only purchaseable once\n
+| -add upgradebonus buttons and more to other items\n
+| -add text on hover for items showing percent of energy/s they produce\n
+| -much more\n
 
 
