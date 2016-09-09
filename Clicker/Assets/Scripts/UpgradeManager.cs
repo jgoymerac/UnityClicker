@@ -7,13 +7,13 @@ public class UpgradeManager : MonoBehaviour {
     public Click click;
 
     public UnityEngine.UI.Text itemInfo;
-    public float cost;
+    public double cost;
     public int count=0;
     public int clickPower;
     public string itemName;
     public Color standard;
     public Color affordable;
-    public float baseCost;
+    public double baseCost;
     private Slider _slider;
 
     void Start() {
@@ -29,7 +29,7 @@ public class UpgradeManager : MonoBehaviour {
          } else {
              GetComponent<Image>().color = standard;
          }*/
-        _slider.value = click.energy / cost * 100;
+        _slider.value = (float)click.energy / (float)cost * 100;
 
     }
 
@@ -38,7 +38,7 @@ public class UpgradeManager : MonoBehaviour {
             click.energy -= cost;
             count++;
             click.energyPerClick += clickPower;
-            cost = Mathf.Round(baseCost * Mathf.Pow(1.15f, count));
+            cost = System.Math.Round(baseCost * Mathf.Pow(1.15f, count));
         }
     }
 

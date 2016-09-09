@@ -4,7 +4,7 @@ using System.Collections;
 public class Click : MonoBehaviour {
     public UnityEngine.UI.Text energyDisplay;
     public UnityEngine.UI.Text epcDisplay;
-    public float energy=0.00f;
+    public double energy=0.00d;
     public int energyPerClick=1;
 
     void Update() {

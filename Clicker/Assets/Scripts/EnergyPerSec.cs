@@ -16,8 +16,8 @@ public class EnergyPerSec : MonoBehaviour {
     }
 
 
-    public float GetEnergyPerSec() {
-        float tick = 0;
+    public double GetEnergyPerSec() {
+        double tick = 0;
         foreach(ItemManager item in items){
             tick += item.count * item.tickValue;
         }
