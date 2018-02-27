@@ -9,7 +9,7 @@ public class Click : MonoBehaviour {
 
     void Update() {
         energyDisplay.text = "Energy: " + energy.ToString("F0");
-        epcDisplay.text = energyPerClick + " Energy/click";
+        epcDisplay.text = $"{energyPerClick} Energy/click";
     }
 
     public void Clicked() {

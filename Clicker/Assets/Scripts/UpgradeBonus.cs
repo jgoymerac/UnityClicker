@@ -19,7 +19,7 @@ public class UpgradeBonus : MonoBehaviour {
 
     }
     void Update() {
-        if (_count.count >= numItems / 2&&purchased ==false) {
+        if (_count.count >= numItems / 2&&purchased == false) {
             gameObject.GetComponent<Button>().interactable = true;
         }
     }
